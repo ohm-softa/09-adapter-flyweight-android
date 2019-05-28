@@ -3,6 +3,7 @@ package ohm.softa.a09.adapter;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,11 +59,13 @@ public class FighterListAdapter extends ArrayAdapter<Fighter> {
         ViewHolder viewHolder; // view lookup cache stored in tag
 
         if (convertView == null) {
+            Log.i(FighterListAdapter.class.getName(), "View created");
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.fighter_item, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
+            Log.i(FighterListAdapter.class.getName(), "View from Tag");
             viewHolder = (ViewHolder) convertView.getTag();
         }
 

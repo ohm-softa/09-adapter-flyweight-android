@@ -1,10 +1,12 @@
 package ohm.softa.a09.model;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
+import java.util.HashMap;
 import java.util.Random;
 
 import ohm.softa.a09.R;
@@ -48,7 +50,15 @@ public class FighterFactory {
         }
     }
 
+    private HashMap<Integer, Bitmap> cache = new HashMap<>();
+
     private Drawable loadImage(int imageId) {
-        return new BitmapDrawable(context.getResources(), BitmapFactory.decodeResource(context.getResources(), imageId));
+        if (!cache.containsKey(imageId)) {
+            Bitmap bm = BitmapFactory.decodeResource(context.getResources(), imageId);
+            cache.put(imageId, bm);
+            return new BitmapDrawable(context.getResources(), bm);
+        }
+
+        return new BitmapDrawable(context.getResources(), cache.get(imageId));
     }
 }
