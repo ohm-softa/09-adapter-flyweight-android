@@ -1,8 +1,8 @@
-package de.thro.inf.prg3.a09.model.rebellion;
+package ohm.softa.a09.model.rebellion;
 
 import android.graphics.drawable.Drawable;
 
-import de.thro.inf.prg3.a09.model.Fighter;
+import ohm.softa.a09.model.Fighter;
 
 /**
  * @author Peter Kurfer

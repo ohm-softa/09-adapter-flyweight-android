@@ -1,4 +1,4 @@
-package de.thro.inf.prg3.a09.model;
+package ohm.softa.a09.model;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
@@ -7,13 +7,13 @@ import android.graphics.drawable.Drawable;
 
 import java.util.Random;
 
-import de.thro.inf.prg3.a09.R;
-import de.thro.inf.prg3.a09.model.empire.TieBomber;
-import de.thro.inf.prg3.a09.model.empire.TieFighter;
-import de.thro.inf.prg3.a09.model.empire.TieInterceptor;
-import de.thro.inf.prg3.a09.model.rebellion.AWing;
-import de.thro.inf.prg3.a09.model.rebellion.XWing;
-import de.thro.inf.prg3.a09.model.rebellion.YWing;
+import ohm.softa.a09.R;
+import ohm.softa.a09.model.empire.TieBomber;
+import ohm.softa.a09.model.empire.TieFighter;
+import ohm.softa.a09.model.empire.TieInterceptor;
+import ohm.softa.a09.model.rebellion.AWing;
+import ohm.softa.a09.model.rebellion.XWing;
+import ohm.softa.a09.model.rebellion.YWing;
 
 /**
  * @author Peter Kurfer

@@ -1,4 +1,4 @@
-package de.thro.inf.prg3.a09.model;
+package ohm.softa.a09.model;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import de.thro.inf.prg3.a09.R;
+import ohm.softa.a09.R;
 
 /**
  * Generator for random pilot names

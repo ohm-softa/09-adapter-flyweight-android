@@ -1,11 +1,11 @@
-package de.thro.inf.prg3.a09;
+package ohm.softa.a09;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import de.thro.inf.prg3.a09.model.FighterFactory;
-import de.thro.inf.prg3.a09.adapter.FighterListAdapter;
+import ohm.softa.a09.model.FighterFactory;
+import ohm.softa.a09.adapter.FighterListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
