@@ -9,9 +9,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-        // (Required) Connect JUnit 5 to the runner
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArgument "runnerBuilder", "de.mannodermaus.junit5.AndroidJUnit5Builder"
     }
     buildTypes {
@@ -45,21 +43,14 @@ dependencies {
     /* Apache commons lang3 - used for StringBuilder, HashcodeBuilder, and so on */
     implementation "org.apache.commons:commons-lang3:$commons_lang3_version"
 
+    androidTestImplementation "androidx.test:runner:1.1.1"
+
     /* JUnit 5 */
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junit5_version}"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:${junit5_version}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junit5_version}"
 
-    // (Optional) If you need "Parameterized Tests"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:${junit5_version}"
-
-    // (Required) Writing tests for JUnit Jupiter
     androidTestImplementation "org.junit.jupiter:junit-jupiter-api:${junit5_version}"
-    // (Required) The instrumentation test companion library
-    androidTestImplementation "de.mannodermaus.junit5:android-instrumentation-test:${junit5_instrumentation_test_version}"
-
-    // (Required) Runtime dependencies to orchestrate the execution on-device
-    androidTestRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junit5_version}"
-    androidTestRuntimeOnly "org.junit.platform:junit-platform-runner:${juni5_platform_runner_version}"
-    androidTestRuntimeOnly "de.mannodermaus.junit5:android-instrumentation-test-runner:${junit5_instrumentation_test_version}"
-    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation "de.mannodermaus.junit5:android-test-core:1.0.0"
+    androidTestRuntimeOnly "de.mannodermaus.junit5:android-test-runner:1.0.0"
 }
