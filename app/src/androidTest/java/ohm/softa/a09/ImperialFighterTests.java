@@ -5,8 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,15 +22,13 @@ import static junit.framework.Assert.assertNotNull;
 /**
  * @author Peter Kurfer
  */
-
-@RunWith(AndroidJUnit4.class)
 public class ImperialFighterTests {
 
     private NameGenerator nameGenerator;
 
     @Test
     public void testCreateTieBomber(){
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         nameGenerator = new NameGenerator(appContext);
 
         Bitmap tieBomberBitmap = BitmapFactory.decodeResource(appContext.getResources(), R.drawable.tiebomber);
@@ -43,7 +41,7 @@ public class ImperialFighterTests {
 
     @Test
     public void testCreateTieFighter(){
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         nameGenerator = new NameGenerator(appContext);
 
         Bitmap tieFighterBitmap = BitmapFactory.decodeResource(appContext.getResources(), R.drawable.tiefighter);
@@ -56,7 +54,7 @@ public class ImperialFighterTests {
 
     @Test
     public void testCreateTieInterceptor(){
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         nameGenerator = new NameGenerator(appContext);
 
         Bitmap tieInterceptorBitmap = BitmapFactory.decodeResource(appContext.getResources(), R.drawable.tieinterceptor);

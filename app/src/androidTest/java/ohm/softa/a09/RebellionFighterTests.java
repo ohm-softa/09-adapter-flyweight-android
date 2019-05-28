@@ -5,11 +5,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import ohm.softa.a09.model.Fighter;
 import ohm.softa.a09.model.NameGenerator;
@@ -23,14 +22,13 @@ import static junit.framework.Assert.assertNotNull;
  * @author Peter Kurfer
  */
 
-@RunWith(AndroidJUnit4.class)
 public class RebellionFighterTests {
 
     private NameGenerator nameGenerator;
 
     @Test
     public void testCreateAWing(){
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         nameGenerator = new NameGenerator(appContext);
 
         Bitmap awingBitmap = BitmapFactory.decodeResource(appContext.getResources(), R.drawable.awing);
@@ -43,7 +41,7 @@ public class RebellionFighterTests {
 
     @Test
     public void testCreateXWing(){
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         nameGenerator = new NameGenerator(appContext);
 
         Bitmap xWingBitmap = BitmapFactory.decodeResource(appContext.getResources(), R.drawable.xwing);
@@ -56,7 +54,7 @@ public class RebellionFighterTests {
 
     @Test
     public void testCreateYWing(){
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         nameGenerator = new NameGenerator(appContext);
 
         Bitmap yWingBitmap = BitmapFactory.decodeResource(appContext.getResources(), R.drawable.ywing);
