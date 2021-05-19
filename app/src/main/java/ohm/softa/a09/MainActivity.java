@@ -1,7 +1,7 @@
 package ohm.softa.a09;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ListView;
 
 import ohm.softa.a09.model.FighterFactory;
