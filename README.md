@@ -62,7 +62,7 @@ Refactor the app to use a `RecyclerView` to improve the performance by following
 1. Modify the file `activity_main.xml` and replace the whole given `ListView` node with this snippet:
 
 ```xml
-<android.support.v7.widget.RecyclerView
+<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fighterListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
